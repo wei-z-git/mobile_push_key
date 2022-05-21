@@ -1,6 +1,6 @@
-FROM python:3.7
+FROM python:3.9
 
-RUN pip install fastapi uvicorn
+RUN pip install fastapi uvicorn requests python-multipart -i https://mirrors.aliyun.com/pypi/simple/
 
 EXPOSE 80
 
