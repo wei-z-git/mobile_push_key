@@ -18,7 +18,6 @@ jobs:
       run: |
         current_tag=$(cat ./CurrentTag)
         docker build . --file Dockerfile --tag registry.cn-qingdao.aliyuncs.com/wei-z/mobile_push_key:$current_tag
-        sudo docker login --username=shell1 registry.cn-qingdao.aliyuncs.com
         
     - name: push the Docker image
       run: |
