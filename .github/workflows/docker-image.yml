@@ -16,5 +16,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
-        current_tag=$(cat ./current-tag)
+        current_tag=$(cat ./CurrentTag)
         docker build . --file Dockerfile --tag my-image-name:$current_tag
