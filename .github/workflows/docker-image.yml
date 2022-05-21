@@ -30,3 +30,4 @@ jobs:
       run: |
         export current_tag=$(cat ./CurrentTag)
         docker push registry.cn-qingdao.aliyuncs.com/wei-z/mobile_push_key:$current_tag
+        
