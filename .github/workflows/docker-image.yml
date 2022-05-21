@@ -18,10 +18,15 @@ jobs:
       run: |
         export current_tag=$(cat ./CurrentTag)
         docker build . --file Dockerfile --tag talkingpikachus/mobile_push_key:$current_tag
+
+    - name: Login to ACR
+      uses: aliyun/acr-login@v1
+      with:
+        login-server: https://registry.cn-qingdao.aliyuncs.com
+        username: "${{ secrets.ACR_USERNAME }}"
+        password: "${{ secrets.ACR_PASSWORD }}"
         
-    - name: push the Docker image
+    - name: Push image
       run: |
         export current_tag=$(cat ./CurrentTag)
-        echo ${{secrets.ACR_PASSWORD}} | sudo docker login --username=${{secrets.ACR_USERNAME}} --password-stdin
-        docker push talkingpikachus/mobile_push_key:$current_tag
-
+        docker push registry.cn-qingdao.aliyuncs.com/wei-z/demo:current_tag
