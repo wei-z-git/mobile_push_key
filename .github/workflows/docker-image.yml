@@ -29,4 +29,4 @@ jobs:
     - name: Push image
       run: |
         export current_tag=$(cat ./CurrentTag)
-        docker push registry.cn-qingdao.aliyuncs.com/wei-z/mobile_push_key:current_tag
+        docker push registry.cn-qingdao.aliyuncs.com/wei-z/mobile_push_key:$current_tag
