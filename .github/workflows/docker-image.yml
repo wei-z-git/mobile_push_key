@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: |
         export current_tag=$(cat ./CurrentTag)
-        docker build . --file Dockerfile --tag talkingpikachus/mobile_push_key:$current_tag
+        docker build . --file Dockerfile --tag registry.cn-qingdao.aliyuncs.com/wei-z/mobile_push_key:$current_tag
 
     - name: Login to ACR
       uses: aliyun/acr-login@v1
