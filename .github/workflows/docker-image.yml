@@ -21,6 +21,7 @@ jobs:
         
     - name: push the Docker image
       run: |
+        export current_tag=$(cat ./CurrentTag)
         echo ${{secrets.ACR_PASSWORD}} | sudo docker login --username=${{secrets.ACR_USERNAME}} --password-stdin registry.cn-qingdao.aliyuncs.com
         docker push registry.cn-qingdao.aliyuncs.com/wei-z/mobile_push_key:$current_tag
 
