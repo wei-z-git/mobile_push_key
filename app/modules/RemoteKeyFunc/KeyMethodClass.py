@@ -85,6 +85,3 @@ class KeyMethodClass:
             "https://{endpoint}/api/v5/repos/{owner}/{repo}/contents/{path}".format(endpoint=self.endpoint, owner=self.owner, repo=self.repo, path=self.path), data=payload_dict).text
         return respose
 
-# n=KeyMethodClass("gitee.com","amadeus666","keystore","secrets-test","4fef6165fcdd31f45da7ea514a3aa924")
-
-# https://gitee.com/amadeus666/keystore.git
