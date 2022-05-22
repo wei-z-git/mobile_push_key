@@ -1,3 +1,5 @@
+https://img.shields.io/github/workflow/status/wei-z-git/mobile_push_key/Docker%20Image%20CI/main
+
 # Quick start
 ## 1.Use Local storage
 (1) use local storage to save keys
