@@ -28,6 +28,12 @@ jobs:
     - name: Push image
       run: |
         docker push registry.cn-qingdao.aliyuncs.com/wei-z/mobile_push_key:latest
+
+    - name: smoke testing
+      run: |
+        docker run -p 81:80 registry.cn-qingdao.aliyuncs.com/wei-z/mobile_push_key:latest
+        sleep 5
+        curl localhost:81
         
   
   Release-build:
