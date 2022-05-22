@@ -1,4 +1,5 @@
-https://img.shields.io/github/workflow/status/wei-z-git/mobile_push_key/Docker%20Image%20CI/main
+[![Release tag](https://img.shields.io/github/workflow/status/wei-z-git/mobile_push_key/Docker%20Image%20CI/main
+)]([http://choosealicense.com/licenses/mit/](https://github.com/wei-z-git/mobile_push_key/pulls))
 
 # Quick start
 ## 1.Use Local storage
