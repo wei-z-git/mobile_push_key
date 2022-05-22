@@ -1,7 +1,6 @@
-[![release tag](https://img.shields.io/github/v/release/wei-z-git/mobile_push_key?include_prereleases
-)]([http://choosealicense.com/licenses/mit/]([https://github.com/wei-z-git/mobile_push_key/releases))
-[![build status](https://img.shields.io/github/workflow/status/wei-z-git/mobile_push_key/Docker%20Image%20CI/main
-)]([http://choosealicense.com/licenses/mit/]([https://github.com/wei-z-git/mobile_push_key/pulls](https://github.com/wei-z-git/mobile_push_key/actions)))
+
+[![release tag](https://img.shields.io/github/v/release/wei-z-git/mobile_push_key?include_prereleases)](https://github.com/wei-z-git/mobile_push_key/releases)
+[![build status](https://img.shields.io/github/workflow/status/wei-z-git/mobile_push_key/Docker%20Image%20CI)](https://github.com/wei-z-git/mobile_push_key/actions)
 
 # Quick start
 ## 1.Use Local storage
