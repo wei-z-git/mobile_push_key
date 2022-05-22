@@ -2,7 +2,7 @@
 )]([http://choosealicense.com/licenses/mit/]([https://github.com/wei-z-git/mobile_push_key/pulls](https://github.com/wei-z-git/mobile_push_key/actions)))
 
 [![release tag](https://img.shields.io/github/v/release/wei-z-git/mobile_push_key?include_prereleases
-)]([http://choosealicense.com/licenses/mit/]([https://github.com/wei-z-git/mobile_push_key/releases)))
+)]([http://choosealicense.com/licenses/mit/]([https://github.com/wei-z-git/mobile_push_key/releases))
 
 # Quick start
 ## 1.Use Local storage
