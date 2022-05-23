@@ -12,7 +12,7 @@ def async1(f):
 @async1
 def A():
     sleep(10)
-    print("函数A睡了十秒钟。。。。。。")
+    print("sleep 10")
     print("a function")
 
 
