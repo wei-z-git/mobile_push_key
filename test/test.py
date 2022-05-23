@@ -1,23 +1,25 @@
-from matplotlib.font_manager import json_dump
-import requests
-import json
-
-def test1(endpoint):
-    respose = requests.get(
-        "https://gitee.com/api/v5/repos/amadeus666/keystore/contents/secrets?access_token=3338f24654a424bf075836fe19aa274b",
-    )
-    respose = json.loads(respose.text)['sha']
-    return respose
+from threading import Thread
+from time import sleep
 
 
-def test2(endpoint):
-    x=test1(1)
-    payload_dict = {'access_token':'3338f24654a424bf075836fe19aa274b','content':'Mg==','sha':x,'message':'2'}
-    respose = requests.put(
-        "https://gitee.com/api/v5/repos/amadeus666/keystore/contents/secrets",
-        data=payload_dict,
-    )
-    respose = respose.text
-    return respose
+def async1(f):
+    def wrapper(*args, **kwargs):
+        thr = Thread(target=f, args=args, kwargs=kwargs)
+        thr.start()
+    return wrapper
 
-test2(1)
+
+@async1
+def A():
+    sleep(10)
+    print("函数A睡了十秒钟。。。。。。")
+    print("a function")
+
+
+def B():
+    print("b function")
+    
+
+if __name__ == '__main__':
+    A()
+    B()

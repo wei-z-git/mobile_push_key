@@ -1,6 +1,7 @@
 import base64
 import requests
 import json
+from threading import Thread
 
 
 class KeyMethodClass:
@@ -10,6 +11,12 @@ class KeyMethodClass:
         self.repo = repo
         self.path = path
         self.access_token = access_token
+
+    def async_wrapper(f):
+        def wrapper(*args, **kwargs):
+            thr = Thread(target=f, args=args, kwargs=kwargs)
+            thr.start()
+        return wrapper
 
     def get_current_key(self):
         # key_file may like "123456\n123456\n123456"
@@ -28,7 +35,8 @@ class KeyMethodClass:
         key_file_str = str(base64.b64decode(json.loads(respose.text)
                                             ['content'].encode('utf-8')), 'utf-8')
         return key_file_str
-
+   
+    @async_wrapper
     def update_key_file(self, key_file_str):
         # get Blob SHA of the file
         sha = json.loads(requests.get(
