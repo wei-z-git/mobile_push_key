@@ -59,6 +59,7 @@ class KeyMethodClass:
         }
         respose = requests.put(
             "https://{endpoint}/api/v5/repos/{owner}/{repo}/contents/{path}".format(endpoint=self.endpoint, owner=self.owner, repo=self.repo, path=self.path), data=payload_dict).text
+        print (respose)
         return respose
 
     # @classmethod
