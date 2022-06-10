@@ -67,3 +67,4 @@ swagger doc: localhost/docs
 `git clone https://gitee.com/amadeus666/mobile_push_key.git`  
 `cd mobile_push_key`  
 `uvicorn app.main:app --reload --port 80`  
+
