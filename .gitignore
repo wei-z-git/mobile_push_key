@@ -1,0 +1,10 @@
+.venv
+.env-test
+__pycache__
+.DS_Store
+data
+.vscode*
+LiteLoader
+.secret
+kubeconfig
+.vscode
