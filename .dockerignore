@@ -1,0 +1,9 @@
+.venv
+accounts
+.vscode
+.env-test
+__pycache__
+.DS_Store
+
+README.md
+.gitlab-ci.yml
